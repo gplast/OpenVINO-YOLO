@@ -1,18 +1,29 @@
 # OpenVINO-YOLO
 Inference of YoloV3 / tiny-YoloV3 on Laptop & RaspberryPi3 & NCS2
  
-Inspired and based on **https://github.com/PINTO0309/OpenVINO-YoloV3**
-Video from **https://www.youtube.com/watch?v=OEygtMfTbEY&t=19s**
+### Inspired and based on 
 
-###Edit the python script value cam_input:
+**https://github.com/PINTO0309/OpenVINO-YoloV3**
+
+### Video 'street,mp4'
+
+**https://www.youtube.com/watch?v=OEygtMfTbEY&t=19s**
+
+### Edit the python script value cam_input:
 ```bash
 cam_input = 0 #For Camera
 cam_input = 'street.mp4' #change with the name of your video
 ```
+
+### Clone Repository
+```bash
+git clone https://github.com/gplast/OpenVINO-YOLO.git
+cd OpenVINO-YOLO/
+```
   
 ### YoloV3 on Laptop CPU
 ```bash
-cd OpenVINO-YOLO/lrmodels/YoloV3/FP32
+cd lrmodels/YoloV3/FP32
 ./download_yolov3lrFP32.sh
 cd ../../../
 python3 openvino_yolov3_test.py -d CPU
@@ -20,7 +31,7 @@ python3 openvino_yolov3_test.py -d CPU
 
 ### YoloV3 on Neural Compute Stick 2
 ```bash
-cd OpenVINO-YOLO/lrmodels/YoloV3/FP16
+cd lrmodels/YoloV3/FP16
 ./download_yolov3lrFP16.sh
 cd ../../../
 python3 openvino_yolov3_test.py -d MYRIAD
@@ -28,7 +39,7 @@ python3 openvino_yolov3_test.py -d MYRIAD
 
 ### Tiny-YoloV3 on Laptop CPU
 ```bash
-cd OpenVINO-YOLO/lrmodels/tiny-YoloV3/FP32
+cd lrmodels/tiny-YoloV3/FP32
 ./download_tiny-yolov3lrFP32.sh
 cd ../../../
 python3 openvino_tiny-yolov3_test.py -d CPU
@@ -36,7 +47,7 @@ python3 openvino_tiny-yolov3_test.py -d CPU
 
 ### Tiny-YoloV3 on Neural Compute Stick 2
 ```bash
-cd OpenVINO-YOLO/lrmodels/tiny-YoloV3/FP16
+cd lrmodels/tiny-YoloV3/FP16
 ./download_tiny-yolov3lrFP16.sh
 cd ../../../
 python3 openvino_tiny-yolov3_test.py -d MYRIAD
@@ -44,7 +55,7 @@ python3 openvino_tiny-yolov3_test.py -d MYRIAD
 
 ### Multistick - YoloV3 on Neural Compute Stick 2
 ```bash
-cd OpenVINO-YOLO/lrmodels/YoloV3/FP16
+cd lrmodels/YoloV3/FP16
 ./download_yolov3lrFP16.sh
 cd ../../../
 python3 openvino_yolov3_MultiStick_test.py -numncs 1 #specify the number of NCS2
@@ -52,7 +63,7 @@ python3 openvino_yolov3_MultiStick_test.py -numncs 1 #specify the number of NCS2
 
 ### Multistick - Tiny-YoloV3 on Neural Compute Stick 2
 ```bash
-cd OpenVINO-YOLO/lrmodels/tiny-YoloV3/FP16
+cd lrmodels/tiny-YoloV3/FP16
 ./download_tiny-yolov3lrFP16.sh
 cd ../../../
 python3 openvino_tiny-yolov3_MultiStick_test.py -numncs 1 #specify the number of NCS2
